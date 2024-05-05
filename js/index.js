@@ -13,6 +13,7 @@ function separateLines(textarea) {
 }
 
 function personFormSubmit() {
+  
   let targetForm = document.querySelector("#mainForm");
   let nameInput = targetForm.querySelector("#name");
   let ageInput = targetForm.querySelector("#age");
@@ -22,6 +23,13 @@ function personFormSubmit() {
   let age = ageInput.value;
   let gender = genderInput.value;
   let interests = separateLines(interestInput);
+  if (
+    nameInput.value.trim() === "" ||
+    ageInput.value.trim() === ""
+  ) {
+    alert("Please fill out all required fields.");
+    return false;
+  }
   let testPerson = new Person({ name, age, gender, interests });
   let greeting = testPerson.hello();
   document.getElementById("output").innerText = greeting;
