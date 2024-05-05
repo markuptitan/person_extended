@@ -3,8 +3,8 @@ function separateLines(textarea) {
   let lines = text.split("\n");
   let wordsInLines = [];
   lines.forEach((line) => {
-    let words = line.trim().split(" "); // Trim each line to remove leading/trailing whitespace
-    words = words.filter((word) => word !== ""); // Filter out empty strings
+    let words = line.trim().split(" ");
+    words = words.filter((word) => word !== "");
     if (words.length > 0) {
       wordsInLines.push(words);
     }
