@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Person Info</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <form id="mainForm" onsubmit="return personFormSubmit()">
-      <label for="name">Name: </label>
-      <input type="text" name="name" id="name" /><br /><br />
-      <label for="name">Age: </label>
-      <input type="number" name="age" id="age" /><br /><br />
-      <label for="name">Gender: </label>
-      <select name="gender" id="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-      <br /><br />
-      <label for="name">Interests: </label>
-      <textarea type="text" name="interests" id="interests"></textarea
-      ><br /><br />
+      <div class="form-group">
+        <label for="name">Name: </label><br />
+        <input type="text" name="name" id="name" required /><br /><br />
+      </div>
+      <div class="form-group">
+        <label for="age">Age: </label><br />
+        <input type="number" name="age" id="age" required /><br /><br />
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender: </label><br />
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br /><br />
+      </div>
+      <div class="form-group">
+        <label for="interests">Interests: </label><br />
+        <textarea name="interests" id="interests"></textarea><br /><br />
+      </div>
       <input type="submit" name="submit" id="submit" />
     </form>
     <p id="output"></p>
