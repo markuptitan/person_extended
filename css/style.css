@@ -5,7 +5,7 @@
 
 body {
   height: 100vh;
-  background-color: turquoise;
+  background-color: #6d918d;
   justify-content: center;
   align-items: center;
 }
@@ -15,10 +15,11 @@ body {
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #665c5ccc;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: aliceblue;
 }
 
 #mainForm .form-group {
@@ -28,6 +29,7 @@ body {
 #mainForm input,
 textarea,
 select {
+  color: aliceblue;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid aliceblue;
@@ -54,6 +56,7 @@ select {
 
 #output {
   margin-top: 20px;
+  color: aliceblue;
   text-align: center;
   width: 80%;
   margin-right: 10%;
