@@ -5,6 +5,7 @@
 
 body {
   height: 100vh;
+  font-family: "Ubuntu Sans Mono";
   background-color: #6d918d;
   justify-content: center;
   align-items: center;
@@ -43,6 +44,7 @@ select {
 
 #mainForm input[type="submit"] {
   background-color: aliceblue;
+  color: #665c5ccc;
   border: none;
   padding: 10px 20px;
   cursor: pointer;

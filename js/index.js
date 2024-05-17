@@ -24,6 +24,11 @@ function personFormSubmit() {
   }
   let testPerson = new Person({ name, age, gender, interests });
   let greeting = testPerson.hello();
-  document.getElementById("output").innerText = greeting;
+  new Typed("#output", {
+    strings: [greeting],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: false,
+  });
   return false;
 }
