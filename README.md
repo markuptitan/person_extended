@@ -1,19 +1,12 @@
-# person_extended
+# Person Extended
 
-## Project description
-This part was not compulsory, but after finishing the first OOP task called Person I decided to create a UI interface as the project only required a basic understanding of node,
-exporting and importing modules and functions. This part which does not contribute to the overall task requirements uses HTML and JS. As of today the 4th of May 2024 I have 
-not implemented CSS.
+## Project Description
+This project is an implementation of a simple GUI using HTML, CSS, and JavaScript DOM manipulation to display a person's information. It was inspired by the OOP task from the [ECN syllabus](http://syllabus.africacode.net/projects/oop/person/index.html), which introduced concepts such as case handling, constructors, and classes in the Node.js environment.
 
-## Stuff I encountered 
-### 1. Importing the Person class
-As someone with less understanding of JS and having worked on the terminal the previous time, I assumed the require method would work as i just wrote `const { Person } = require('./person')` 
-would work. Well, that works on a NodeJS environment but on an interface dealing with the browser I had to manually add the script to the HTML file using the `script` tag.
+## Features Implemented So Far
+1. **Handle Empty Spaces Cases**: The program handles empty trailing spaces and strings with spaces only by assigning "I have no interests" to empty strings and no input. This is achieved using the `trim` method along with the `map` and `split` functions.
+2. **Blinking Cursor Indicator**: A blinking cursor indicates the number of times the form has been submitted. This cursor appears below or beside the text depending on the device being used. Each form submission adds a new cursor. While it might seem like a bug, it adds a unique touch to the application.
+3. **Handling Multiple Typed Instances**: Previously, initializing `Typed` more than once led to the previous text being typed in reverse an infinite number of times. This issue was resolved by using a variable called `typedInstance` and calling the `destroy` method every time a new instance is created. Additionally, the `#output` element is cleared on every form submission to ensure a fresh start.
 
-### 2. Returning false after form submission
-Well, after printing the greeting to the browser, we have to prevent the form from actually submitting. This meant modifying the function and returning false after the whole execution
-has occured. I also had to write `onsubmit="return personFormSubmit()` to ensure that the form does not proceed to submission.
-
-### 3. Working on a 32-bit Windows machine is tiresome
-Okay I'm probably overstepping on this one but uhh, yeah you get the idea of using https://vscode.dev for Development which leads to less extensions. It's just a pain man, I'm glad I'll
-continue this on a 64-bit Linux machine from Monday the 6th of May 2024.
+## Conclusion
+This project has provided a great opportunity to learn and apply OOP concepts, DOM manipulation, and handling of user input in a web application. It continues to be a work in progress with potential for further enhancements like responsiveness.
