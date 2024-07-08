@@ -1,67 +1,61 @@
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  font-family: "Ubuntu Sans Mono";
-  background-color: #6d918d;
-  justify-content: center;
-  align-items: center;
+    font-family: 'Ubuntu Sans Mono', monospace;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#mainForm {
-  text-align: center;
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #665c5ccc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: aliceblue;
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
 }
 
-#mainForm .form-group {
-  margin-bottom: 20px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-#mainForm input,
-textarea,
-select {
-  color: aliceblue;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid aliceblue;
-  margin-bottom: 10px;
-  outline: none;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-#mainForm input[type="submit"] {
-  background-color: aliceblue;
-  color: #665c5ccc;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-#mainForm input[type="submit"]:hover {
-  background-color: lightblue;
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 #output {
-  margin-top: 20px;
-  color: aliceblue;
-  text-align: center;
-  width: 80%;
-  margin-right: 10%;
-  margin-left: 10%;
-  font-size: 1.2em;
+    margin-top: 20px;
+    font-size: 1.2em;
 }
