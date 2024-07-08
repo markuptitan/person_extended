@@ -1,34 +1,26 @@
-function separateLines(textarea) {
-  let text = textarea.value;
-  let lines = text.split("\n");
-  let cleanedLines = lines
-    .map((line) => line.trim())
-    .filter((line) => line !== "");
-  return cleanedLines;
-}
-
 function personFormSubmit() {
-  let targetForm = document.querySelector("#mainForm");
-  let nameInput = targetForm.querySelector("#name");
-  let ageInput = targetForm.querySelector("#age");
-  let genderInput = targetForm.querySelector("#gender");
-  let interestInput = targetForm.querySelector("#interests");
-  let name = nameInput.value;
-  let age = ageInput.value;
-  let gender = genderInput.value;
-  let interests = separateLines(interestInput);
+    const form = document.getElementById('mainForm');
+    let typedInstance;
+    const name = form.name.value.trim();
+    const age = form.age.value.trim();
+    const gender = form.gender.value;
+    const interests = form.interests.value.split('\n').map(line => line.trim()).filter(line => line);
+    if (!name || !age) {
+        alert('Please fill out all required fields.');
+        return false;
+    }
+    const person = new Person(name, age, gender, interests);
+    const greeting = person.hello();
+    if (typedInstance) {
+        typedInstance.destroy();
+    }
+    document.getElementById('output').textContent = '';
+    typedInstance = new Typed('#output', {
+        strings: [greeting],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: false
+    });
 
-  if (name.trim() === "" || age.trim() === "") {
-    alert("Please fill out all required fields.");
     return false;
-  }
-  let testPerson = new Person({ name, age, gender, interests });
-  let greeting = testPerson.hello();
-  new Typed("#output", {
-    strings: [greeting],
-    typeSpeed: 50,
-    backSpeed: 25,
-    loop: false,
-  });
-  return false;
 }
