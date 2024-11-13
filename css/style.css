@@ -44,14 +44,17 @@ label {
   font-weight: bold;
 }
 
-input,
-textarea,
-select {
+.inputs {
+  background-color: #fff;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+#dropdown {
+  background-color: #e0e0e0;
 }
 
 input[type="submit"] {
