@@ -1,12 +1,35 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --background-color: #f0f0f0;
+  --card-background-color: #fff;
+  --text-color: #fff;
+  --input-border-color: #ccc;
+  --dropdown-background-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Styles for modifying swal appearance*/
+
+.swal2-confirm {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--primary-hover-color);
+}
+
 body {
   font-family: "Ubuntu Sans Mono", monospace;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -16,17 +39,23 @@ body {
 header {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   text-align: center;
   position: fixed;
   top: 0;
 }
 
+a:active,
+a:hover,
+a {
+  color: #0056b3;
+}
+
 main {
-  background-color: #fff;
+  background-color: var(--card-background-color);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   padding: 20px;
   width: 80%;
   max-width: 600px;
@@ -45,21 +74,21 @@ label {
 }
 
 .inputs {
-  background-color: #fff;
+  background-color: var(--card-background-color);
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border-color);
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
 #dropdown {
-  background-color: #e0e0e0;
+  background-color: var(--dropdown-background-color);
 }
 
 input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -68,7 +97,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover-color);
 }
 
 #output {

@@ -27,6 +27,9 @@ class Person {
   }
 }
 
+let numberOfTimesSubmitted =
+  parseInt(localStorage.getItem("totalNumberSubmitted")) || 0;
+
 function personFormSubmit() {
   const form = document.getElementById("mainForm");
   let typedInstance;
@@ -58,6 +61,16 @@ function personFormSubmit() {
       submitButton.disabled = false;
     },
   });
-
+  numberOfTimesSubmitted++;
+  localStorage.setItem("totalNumberSubmitted", numberOfTimesSubmitted);
+  if (numberOfTimesSubmitted === 15) {
+    Swal.fire({
+      title: "Interested in supporting the project?",
+      text: "You seem to have submitted the form numerous times. How would you feel about starring the repo in Github?",
+      icon: "question",
+      footer:
+        '<a href="https://github.com/markuptitan/person_extended" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Click here to star the repo on GitHub</a>',
+    });
+  }
   return false;
 }
